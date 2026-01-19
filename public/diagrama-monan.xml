@@ -1,0 +1,550 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0" version="29.2.6">
+  <diagram id="MONAN-TEA-System" name="Sistema MONAN - Diagnóstico TEA com IA">
+    <mxGraphModel dx="2000" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Sistema Central IA -->
+        <mxCell id="ia-core" value="SISTEMA IA&#xa;Análise ECG para TEA&#xa;Base: 10.245 diagnósticos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;fontStyle=1;strokeWidth=3" vertex="1" parent="1">
+          <mxGeometry x="800" y="40" width="200" height="80" as="geometry"/>
+        </mxCell>
+        
+        <!-- Login -->
+        <mxCell id="login-1" value="LOGIN" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="180" width="160" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Login Components -->
+        <mxCell id="login-2" value="Campo Email" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6" vertex="1" parent="1">
+          <mxGeometry x="40" y="260" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="login-3" value="Campo Senha" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6" vertex="1" parent="1">
+          <mxGeometry x="40" y="310" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="login-4" value="Botão Entrar&#xa;(Validação JWT)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366" vertex="1" parent="1">
+          <mxGeometry x="40" y="360" width="120" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Arrows from Login -->
+        <mxCell id="edge-login-1" edge="1" parent="1" source="login-1" target="login-2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-login-2" edge="1" parent="1" source="login-1" target="login-3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-login-3" edge="1" parent="1" source="login-1" target="login-4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Dashboard -->
+        <mxCell id="dash-1" value="DASHBOARD&#xa;Diagnóstico TEA com IA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="280" y="180" width="180" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Dashboard Stats -->
+        <mxCell id="dash-2" value="Total Usuários" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" vertex="1" parent="1">
+          <mxGeometry x="240" y="270" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="dash-3" value="Médicos Revisores" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366" vertex="1" parent="1">
+          <mxGeometry x="350" y="270" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="dash-4" value="Pacientes Avaliados" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6" vertex="1" parent="1">
+          <mxGeometry x="240" y="320" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="dash-5" value="Diagnósticos IA" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00" vertex="1" parent="1">
+          <mxGeometry x="350" y="320" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="dash-6" value="Status Revisão&#xa;(Aprovados/Pendentes/Negados)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
+          <mxGeometry x="240" y="370" width="210" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="dash-7" value="Gráfico: Diagnósticos IA&#xa;por Período" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
+          <mxGeometry x="240" y="430" width="210" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="dash-8" value="Logs de Atividade&#xa;(IA + Revisões Médicas)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450" vertex="1" parent="1">
+          <mxGeometry x="240" y="490" width="210" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Arrows from Dashboard -->
+        <mxCell id="edge-dash-1" edge="1" parent="1" source="dash-1" target="dash-2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-dash-2" edge="1" parent="1" source="dash-1" target="dash-3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-dash-3" edge="1" parent="1" source="dash-1" target="dash-4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-dash-4" edge="1" parent="1" source="dash-1" target="dash-5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-dash-5" edge="1" parent="1" source="dash-1" target="dash-6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-dash-6" edge="1" parent="1" source="dash-1" target="dash-7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-dash-7" edge="1" parent="1" source="dash-1" target="dash-8">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Gestão de Usuários -->
+        <mxCell id="user-1" value="GESTÃO DE USUÁRIOS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="540" y="180" width="200" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- User Components -->
+        <mxCell id="user-2" value="Barra de Pesquisa" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6" vertex="1" parent="1">
+          <mxGeometry x="500" y="260" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="user-3" value="Filtro por Perfil&#xa;(ADM/Médico/Paciente)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6" vertex="1" parent="1">
+          <mxGeometry x="640" y="260" width="130" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="user-4" value="Botão: Registrar" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366" vertex="1" parent="1">
+          <mxGeometry x="500" y="320" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="user-5" value="Tabela de Usuários&#xa;(ID, Nome, Email, Perfil, Status)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
+          <mxGeometry x="500" y="370" width="270" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="user-6" value="Modal Cadastro" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366" vertex="1" parent="1">
+          <mxGeometry x="640" y="320" width="130" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="user-7" value="Ações: Editar, Suspender, Remover" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00" vertex="1" parent="1">
+          <mxGeometry x="500" y="430" width="270" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Arrows from User -->
+        <mxCell id="edge-user-1" edge="1" parent="1" source="user-1" target="user-2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-user-2" edge="1" parent="1" source="user-1" target="user-3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-user-3" edge="1" parent="1" source="user-1" target="user-4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-user-4" edge="1" parent="1" source="user-1" target="user-5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-user-5" edge="1" parent="1" source="user-1" target="user-6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-user-6" edge="1" parent="1" source="user-1" target="user-7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Gestão de Médicos Revisores -->
+        <mxCell id="prof-1" value="MÉDICOS REVISORES&#xa;Especialistas em TEA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="840" y="180" width="200" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Prof Components -->
+        <mxCell id="prof-2" value="Busca por CRM,&#xa;Nome, Especialidade" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6" vertex="1" parent="1">
+          <mxGeometry x="820" y="270" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="prof-3" value="Botão: Novo Médico" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366" vertex="1" parent="1">
+          <mxGeometry x="960" y="270" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="prof-4" value="Cards de Médicos&#xa;(Nome, CRM, Especialidade,&#xa;Diagnósticos Revisados)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366" vertex="1" parent="1">
+          <mxGeometry x="820" y="330" width="260" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="prof-5" value="Modal: Cadastro" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
+          <mxGeometry x="820" y="410" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="prof-6" value="Modal: Ver Diagnósticos&#xa;Revisados pelo Médico" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00" vertex="1" parent="1">
+          <mxGeometry x="960" y="410" width="120" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="prof-7" value="Ações: Ver, Editar,&#xa;Suspender, Remover" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00" vertex="1" parent="1">
+          <mxGeometry x="820" y="475" width="260" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Arrows from Prof -->
+        <mxCell id="edge-prof-1" edge="1" parent="1" source="prof-1" target="prof-2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-prof-2" edge="1" parent="1" source="prof-1" target="prof-3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-prof-3" edge="1" parent="1" source="prof-1" target="prof-4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-prof-4" edge="1" parent="1" source="prof-1" target="prof-5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-prof-5" edge="1" parent="1" source="prof-1" target="prof-6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-prof-6" edge="1" parent="1" source="prof-1" target="prof-7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Gestão de Pacientes -->
+        <mxCell id="pac-1" value="GESTÃO DE PACIENTES&#xa;Crianças em Avaliação TEA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1140" y="180" width="220" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Pac Components -->
+        <mxCell id="pac-2" value="Busca (Nome, CPF)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6" vertex="1" parent="1">
+          <mxGeometry x="1120" y="270" width="110" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="pac-3" value="Novo Paciente" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366" vertex="1" parent="1">
+          <mxGeometry x="1250" y="270" width="110" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="pac-4" value="Cards de Pacientes&#xa;(Dados Pessoais,&#xa;Responsável, Idade,&#xa;Observações Clínicas)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6" vertex="1" parent="1">
+          <mxGeometry x="1120" y="320" width="240" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="pac-5" value="Modal: Cadastro&#xa;(Com observações&#xa;sobre sintomas TEA)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
+          <mxGeometry x="1120" y="410" width="110" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="pac-6" value="Modal: Histórico&#xa;Avaliações IA" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00" vertex="1" parent="1">
+          <mxGeometry x="1250" y="410" width="110" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="pac-7" value="Ações: Ver Histórico,&#xa;Editar, Remover" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00" vertex="1" parent="1">
+          <mxGeometry x="1120" y="490" width="240" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Arrows from Pac -->
+        <mxCell id="edge-pac-1" edge="1" parent="1" source="pac-1" target="pac-2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-pac-2" edge="1" parent="1" source="pac-1" target="pac-3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-pac-3" edge="1" parent="1" source="pac-1" target="pac-4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-pac-4" edge="1" parent="1" source="pac-1" target="pac-5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-pac-5" edge="1" parent="1" source="pac-1" target="pac-6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-pac-6" edge="1" parent="1" source="pac-1" target="pac-7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Diagnósticos IA -->
+        <mxCell id="laud-1" value="DIAGNÓSTICOS IA&#xa;Análise ECG para TEA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="620" width="200" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Laud Components -->
+        <mxCell id="laud-2" value="Busca (ID, Paciente,&#xa;Médico)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6" vertex="1" parent="1">
+          <mxGeometry x="40" y="710" width="110" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="laud-3" value="Filtro Status&#xa;(Aprovado/Pendente/Negado)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6" vertex="1" parent="1">
+          <mxGeometry x="170" y="710" width="120" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="laud-4" value="Stats: Total, Aprovados,&#xa;Pendentes, Negados" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" vertex="1" parent="1">
+          <mxGeometry x="40" y="775" width="250" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="laud-5" value="Tabela Diagnósticos&#xa;(ID, Paciente, Data, Similaridade %,&#xa;Médico Revisor, Status)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
+          <mxGeometry x="40" y="835" width="250" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="laud-6" value="Modal: Visualização Completa&#xa;- Info Paciente&#xa;- Análise IA (% Similaridade)&#xa;- Características Detectadas&#xa;- Revisão Médica + Parecer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00" vertex="1" parent="1">
+          <mxGeometry x="40" y="915" width="130" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="laud-7" value="Ações: Visualizar,&#xa;Aprovar/Negar,&#xa;Download Relatório" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00" vertex="1" parent="1">
+          <mxGeometry x="190" y="915" width="100" height="75" as="geometry"/>
+        </mxCell>
+        
+        <!-- Arrows from Laud -->
+        <mxCell id="edge-laud-1" edge="1" parent="1" source="laud-1" target="laud-2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-laud-2" edge="1" parent="1" source="laud-1" target="laud-3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-laud-3" edge="1" parent="1" source="laud-1" target="laud-4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-laud-4" edge="1" parent="1" source="laud-1" target="laud-5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-laud-5" edge="1" parent="1" source="laud-1" target="laud-6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-laud-6" edge="1" parent="1" source="laud-1" target="laud-7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Permissões e Acessos -->
+        <mxCell id="perm-1" value="PERMISSÕES E ACESSOS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="380" y="620" width="220" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Perm Components -->
+        <mxCell id="perm-2" value="Cards Níveis de Acesso&#xa;(ADM: Total | Médico: Revisar&#xa;| Paciente: Ver Próprios)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" vertex="1" parent="1">
+          <mxGeometry x="350" y="700" width="130" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="perm-3" value="Lista Permissões&#xa;por Usuário" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6" vertex="1" parent="1">
+          <mxGeometry x="500" y="700" width="130" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="perm-4" value="Diagrama Relacionamentos&#xa;(Usuario ↔ PermissaoAcesso)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
+          <mxGeometry x="350" y="780" width="280" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="perm-5" value="Estrutura de Classes&#xa;(Usuario, ADM, Medico, Paciente,&#xa;DiagnosticoIA, AnaliseECG)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
+          <mxGeometry x="350" y="840" width="280" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="perm-6" value="Regras de Acesso&#xa;ADM: Total&#xa;Médico: Revisar Diagnósticos IA&#xa;Paciente: Ver Próprio Histórico" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450" vertex="1" parent="1">
+          <mxGeometry x="350" y="920" width="280" height="80" as="geometry"/>
+        </mxCell>
+        
+        <!-- Arrows from Perm -->
+        <mxCell id="edge-perm-1" edge="1" parent="1" source="perm-1" target="perm-2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-perm-2" edge="1" parent="1" source="perm-1" target="perm-3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-perm-3" edge="1" parent="1" source="perm-1" target="perm-4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-perm-4" edge="1" parent="1" source="perm-1" target="perm-5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-perm-5" edge="1" parent="1" source="perm-1" target="perm-6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Configurações -->
+        <mxCell id="config-1" value="CONFIGURAÇÕES" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="700" y="620" width="180" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Config Components -->
+        <mxCell id="config-2" value="Sistema (Nome,&#xa;Versão, Ambiente)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" vertex="1" parent="1">
+          <mxGeometry x="680" y="700" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="config-3" value="Notificações" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
+          <mxGeometry x="800" y="700" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="config-4" value="Segurança&#xa;(2FA, Sessão)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450" vertex="1" parent="1">
+          <mxGeometry x="680" y="760" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="config-5" value="Backup e Dados" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366" vertex="1" parent="1">
+          <mxGeometry x="800" y="760" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="config-6" value="Aparência&#xa;(Tema)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6" vertex="1" parent="1">
+          <mxGeometry x="680" y="820" width="100" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="config-7" value="Idioma/Região" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6" vertex="1" parent="1">
+          <mxGeometry x="800" y="820" width="100" height="45" as="geometry"/>
+        </mxCell>
+        
+        <!-- Arrows from Config -->
+        <mxCell id="edge-config-1" edge="1" parent="1" source="config-1" target="config-2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-config-2" edge="1" parent="1" source="config-1" target="config-3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-config-3" edge="1" parent="1" source="config-1" target="config-4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-config-4" edge="1" parent="1" source="config-1" target="config-5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-config-5" edge="1" parent="1" source="config-1" target="config-6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-config-6" edge="1" parent="1" source="config-1" target="config-7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Fluxo de Trabalho IA -->
+        <mxCell id="workflow-1" value="FLUXO DE TRABALHO IA" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=13;fontStyle=1;verticalAlign=top" vertex="1" parent="1">
+          <mxGeometry x="1000" y="620" width="360" height="380" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="flow-1" value="1. Upload ECG do Paciente" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" vertex="1" parent="1">
+          <mxGeometry x="1020" y="660" width="160" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="flow-2" value="2. IA Analisa ECG&#xa;Base: 10.245 diagnósticos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6" vertex="1" parent="1">
+          <mxGeometry x="1200" y="660" width="140" height="50" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="flow-3" value="3. Gera % Similaridade&#xa;com TEA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
+          <mxGeometry x="1020" y="730" width="160" height="50" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="flow-4" value="4. Identifica Características&#xa;no ECG" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
+          <mxGeometry x="1200" y="730" width="140" height="50" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="flow-5" value="5. Médico Recebe&#xa;para Revisão" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00" vertex="1" parent="1">
+          <mxGeometry x="1020" y="800" width="160" height="50" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="flow-6" value="6. Médico Analisa:&#xa;• Dados IA&#xa;• ECG Original&#xa;• Histórico Clínico" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left" vertex="1" parent="1">
+          <mxGeometry x="1200" y="800" width="140" height="80" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="flow-7" value="7. Decisão Médica" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1020" y="870" width="160" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="flow-8" value="✓ APROVAR&#xa;✗ NEGAR" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450" vertex="1" parent="1">
+          <mxGeometry x="1020" y="920" width="80" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="flow-9" value="8. Gera Relatório&#xa;Final com Parecer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366" vertex="1" parent="1">
+          <mxGeometry x="1120" y="920" width="140" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Flow Arrows -->
+        <mxCell id="edge-flow-1" edge="1" parent="1" source="flow-1" target="flow-2" style="strokeWidth=2;strokeColor=#666666">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-flow-2" edge="1" parent="1" source="flow-2" target="flow-3" style="strokeWidth=2;strokeColor=#666666">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-flow-3" edge="1" parent="1" source="flow-3" target="flow-4" style="strokeWidth=2;strokeColor=#666666">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-flow-4" edge="1" parent="1" source="flow-4" target="flow-5" style="strokeWidth=2;strokeColor=#666666">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-flow-5" edge="1" parent="1" source="flow-5" target="flow-6" style="strokeWidth=2;strokeColor=#666666">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-flow-6" edge="1" parent="1" source="flow-6" target="flow-7" style="strokeWidth=2;strokeColor=#666666">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-flow-7" edge="1" parent="1" source="flow-7" target="flow-8" style="strokeWidth=2;strokeColor=#666666">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-flow-8" edge="1" parent="1" source="flow-8" target="flow-9" style="strokeWidth=2;strokeColor=#666666">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Navigation Flow -->
+        <mxCell id="nav-1" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=3;strokeColor=#3399FF;dashed=1" edge="1" parent="1" source="login-1" target="dash-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="205" as="sourcePoint"/>
+            <mxPoint x="280" y="205" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- IA Core Connections -->
+        <mxCell id="ia-conn-1" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#9673a6;dashed=1" edge="1" parent="1" source="ia-core" target="laud-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="ia-conn-2" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#9673a6;dashed=1" edge="1" parent="1" source="ia-core" target="flow-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Legend -->
+        <mxCell id="legend-title" value="LEGENDA" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=13;fontStyle=1;verticalAlign=top" vertex="1" parent="1">
+          <mxGeometry x="1420" y="180" width="340" height="820" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="legend-1" value="Sistema MONAN - TEA com IA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1430" y="200" width="320" height="30" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="legend-2" value="Input / Busca / Filtro" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6" vertex="1" parent="1">
+          <mxGeometry x="1440" y="250" width="140" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend-3" value="Botão / Ação" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366" vertex="1" parent="1">
+          <mxGeometry x="1600" y="250" width="140" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend-4" value="Card / Tabela / Display" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
+          <mxGeometry x="1440" y="295" width="140" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend-5" value="Modal / Popup" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00" vertex="1" parent="1">
+          <mxGeometry x="1600" y="295" width="140" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend-6" value="Estatísticas / Métricas" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" vertex="1" parent="1">
+          <mxGeometry x="1440" y="340" width="140" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend-7" value="Logs / Histórico" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450" vertex="1" parent="1">
+          <mxGeometry x="1600" y="340" width="140" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend-8" value="Módulo Principal" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1440" y="385" width="140" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend-9" value="Sistema IA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;strokeWidth=3" vertex="1" parent="1">
+          <mxGeometry x="1600" y="385" width="140" height="35" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="legend-10" value="Fluxo de Navegação" style="endArrow=classic;html=1;rounded=0;strokeWidth=3;strokeColor=#3399FF;dashed=1" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1440" y="447" as="sourcePoint"/>
+            <mxPoint x="1580" y="447" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="legend-11" value="Conexão IA" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#9673a6;dashed=1" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1600" y="447" as="sourcePoint"/>
+            <mxPoint x="1740" y="447" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="legend-12" value="Relacionamento" style="endArrow=classic;html=1;rounded=0;strokeWidth=1;strokeColor=#000000" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1440" y="487" as="sourcePoint"/>
+            <mxPoint x="1580" y="487" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Info Técnica -->
+        <mxCell id="info-tech" value="INFORMAÇÕES TÉCNICAS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontStyle=1;align=left;verticalAlign=top" vertex="1" parent="1">
+          <mxGeometry x="1440" y="520" width="300" height="460" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="info-1" value="Sistema: MONAN&#xa;Diagnóstico de Autismo (TEA)&#xa;Versão: 1.0.0" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1450" y="550" width="280" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="info-2" value="Tecnologia IA:&#xa;• Rede Neural Profunda&#xa;• Base: 10.245 ECGs diagnosticados&#xa;• Acurácia: 87% de correlação&#xa;• Análise de variabilidade cardíaca&#xa;• Detecção de padrões TEA" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="620" width="280" height="100" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="info-3" value="Perfis de Usuário:&#xa;• ADM: Gestão total do sistema&#xa;• Médico: Revisar diagnósticos IA&#xa;• Paciente: Ver próprio histórico" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="730" width="280" height="80" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="info-4" value="Fluxo de Trabalho:&#xa;1. ECG é enviado ao sistema&#xa;2. IA analisa e gera % similaridade&#xa;3. Médico recebe para revisão&#xa;4. Médico aprova ou nega&#xa;5. Sistema gera relatório final" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="820" width="280" height="100" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="info-5" value="Status de Diagnóstico:&#xa;• Pendente Revisão (laranja)&#xa;• Aprovado (verde)&#xa;• Negado (vermelho)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="930" width="280" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Sidebar Menu -->
+        <mxCell id="sidebar-title" value="MENU LATERAL" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;fontStyle=1;verticalAlign=top;align=left" vertex="1" parent="1">
+          <mxGeometry x="1440" y="1030" width="300" height="320" as="geometry"/>
+        </mxCell>
+        <mxCell id="sidebar-1" value="• Dashboard (Estatísticas IA)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="1060" width="280" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sidebar-2" value="• Gestão de Usuários" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="1090" width="280" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sidebar-3" value="• Médicos Revisores (Especialistas)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="1120" width="280" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sidebar-4" value="• Gestão de Pacientes (Crianças TEA)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="1150" width="280" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sidebar-5" value="• Diagnósticos IA (Análise ECG)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="1180" width="280" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sidebar-6" value="• Permissões e Acessos" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="1210" width="280" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sidebar-7" value="• Configurações" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="1240" width="280" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sidebar-8" value="• Sair" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#CC0000" vertex="1" parent="1">
+          <mxGeometry x="1450" y="1310" width="280" height="25" as="geometry"/>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

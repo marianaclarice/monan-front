@@ -16,7 +16,7 @@ export default function Configuracoes() {
   if (!mounted) return null;
 
   return (
-    <div className="bg-background max-w-4xl mx-auto space-y-6">
+    <div className="bg-secondary max-w-4xl mx-auto space-y-6">
       {/* Header */}
       <div>
         <h1 className="text-foreground mb-2">Configurações</h1>
@@ -27,7 +27,7 @@ export default function Configuracoes() {
       <div className="bg-background rounded-2xl border border-slate-200 overflow-hidden">
         <div className="bg-background px-6 py-4 border-b border-slate-200">
           <div className="flex items-center gap-3">
-            <Settings className="w-5 h-5 text-slate-600" />
+            <Settings className="w-5 h-5 text-foreground" />
             <h2 className="text-foreground">Configurações do Sistema</h2>
           </div>
         </div>

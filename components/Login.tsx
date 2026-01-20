@@ -39,25 +39,25 @@ export default function Login({ onLogin }: LoginProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-background from-slate-50 to-slate-100 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         {/* Logo e Header */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-[#eeeeee] rounded-2xl mb-4">
             <Logo className="w-auto h-auto" />
           </div>
-          <h1 className="text-slate-900 mb-2">SISTEMA MONAN</h1>
-          <p className="text-slate-600">
+          <h1 className="text-foreground mb-2">SISTEMA MONAN</h1>
+          <p className="text-muted-foreground">
             Diagnóstico de Autismo (TEA) Assistido por IA
           </p>
-          <p className="text-slate-500 mt-2">
+          <p className="text-muted-foreground mt-2">
             Análise de EEG com Inteligência Artificial
           </p>
         </div>
 
         {/* Card de Login */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 border border-slate-200">
-          <h2 className="text-slate-900 mb-6">
+        <div className="bg-background rounded-2xl shadow-xl p-8 border border-slate-200">
+          <h2 className="text-foreground mb-6">
             Acesso ao Sistema
           </h2>
 
@@ -66,19 +66,19 @@ export default function Login({ onLogin }: LoginProps) {
             <div>
               <label
                 htmlFor="email"
-                className="block text-slate-700 mb-2"
+                className="block text-foreground mb-2"
               >
                 Email
               </label>
               <div className="relative">
-                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-foreground" />
                 <input
                   id="email"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="seu@email.com"
-                  className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-black"
+                  className="w-full pl-11 pr-4 py-3 bg-secondary text-foreground border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   required
                 />
               </div>
@@ -88,19 +88,19 @@ export default function Login({ onLogin }: LoginProps) {
             <div>
               <label
                 htmlFor="senha"
-                className="block text-slate-700 mb-2"
+                className="block text-foreground mb-2"
               >
                 Senha
               </label>
               <div className="relative">
-                <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+                <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-foreground" />
                 <input
                   id="senha"
                   type="password"
                   value={senha}
                   onChange={(e) => setSenha(e.target.value)}
                   placeholder="••••••••"
-                  className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-black"
+                  className="w-full pl-11 pr-4 py-3 bg-secondary text-foreground border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   required
                 />
               </div>
@@ -134,10 +134,10 @@ export default function Login({ onLogin }: LoginProps) {
 
           {/* Info de demo */}
           <div className="mt-6 pt-6 border-t border-slate-200">
-            <p className="text-slate-700 font-semibold mb-3 text-center">
+            <p className="text-foreground font-semibold mb-3 text-center">
               Usuários de Demonstração:
             </p>
-            <div className="space-y-2 text-slate-600">
+            <div className="space-y-2 text-muted">
               <div className="bg-blue-50 p-3 rounded-lg">
                 <p className="font-semibold text-blue-800">
                   👨‍💼 Administrador

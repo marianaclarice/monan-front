@@ -43,7 +43,7 @@ export default function Dashboard({ currentUser }: DashboardProps) {
   // Dashboard para Admin
   if (isAdmin) {
     return (
-      <div className="bg-background max-w-7xl mx-auto space-y-8">
+      <div className="bg-secondary max-w-7xl mx-auto space-y-8">
         {/* Header */}
         <div>
           <h1 className="text-foreground mb-2">Dashboard</h1>
@@ -61,40 +61,40 @@ export default function Dashboard({ currentUser }: DashboardProps) {
             <div key={index} className="bg-muted rounded-3xl p-6 border border-slate-200 hover:shadow-lg transition-shadow">
               <div className="flex items-start justify-between mb-4">
                 <div className={`${stat.color} w-12 h-12 rounded-xl flex items-center justify-center`}>
-                  <stat.icon className="w-6 h-6 text-white" />
+                  <stat.icon className="w-6 h-6 text-foreground" />
                 </div>
                 <div className="flex items-center gap-1 text-green-600 bg-green-50 px-2 py-1 rounded-lg">
                   <TrendingUp className="w-4 h-4" />
                   <span>{stat.trend}</span>
                 </div>
               </div>
-              <p className="text-slate-600 mb-1">{stat.label}</p>
-              <p className="text-slate-900">{stat.value}</p>
+              <p className="text-foreground mb-1">{stat.label}</p>
+              <p className="text-foreground">{stat.value}</p>
             </div>
           ))}
         </div>
 
         {/* Status de Revisão */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white rounded-2xl p-6 border border-slate-200">
+          <div className="bg-background rounded-2xl p-6 border border-slate-200">
             <div className="flex items-center gap-3 mb-2">
               <Activity className="w-8 h-8 text-orange-600" />
               <div>
-                <p className="text-slate-600">Aguardando Revisão</p>
-                <p className="text-slate-900">78</p>
+                <p className="text-foreground">Aguardando Revisão</p>
+                <p className="text-foreground">78</p>
               </div>
             </div>
             <div className="mt-4 h-2 bg-slate-100 rounded-full overflow-hidden">
               <div className="h-full bg-orange-600" style={{ width: '63%' }}></div>
             </div>
           </div>
-          
-          <div className="bg-white rounded-2xl p-6 border border-slate-200">
+
+          <div className="bg-background rounded-2xl p-6 border border-slate-200">
             <div className="flex items-center gap-3 mb-2">
               <Brain className="w-8 h-8 text-green-600" />
               <div>
-                <p className="text-slate-600">Diagnósticos Aprovados</p>
-                <p className="text-slate-900">1,089</p>
+                <p className="text-foreground">Diagnósticos Aprovados</p>
+                <p className="text-foreground">1,089</p>
               </div>
             </div>
             <div className="mt-4 h-2 bg-slate-100 rounded-full overflow-hidden">
@@ -102,12 +102,12 @@ export default function Dashboard({ currentUser }: DashboardProps) {
             </div>
           </div>
           
-          <div className="bg-white rounded-2xl p-6 border border-slate-200">
+          <div className="bg-background rounded-2xl p-6 border border-slate-200">
             <div className="flex items-center gap-3 mb-2">
               <FileText className="w-8 h-8 text-red-600" />
               <div>
-                <p className="text-slate-600">Diagnósticos Negados</p>
-                <p className="text-slate-900">67</p>
+                <p className="text-foreground">Diagnósticos Negados</p>
+                <p className="text-foreground">67</p>
               </div>
             </div>
             <div className="mt-4 h-2 bg-slate-100 rounded-full overflow-hidden">
@@ -121,7 +121,7 @@ export default function Dashboard({ currentUser }: DashboardProps) {
 
   // Dashboard simplificado para Médico (Visão Geral)
   return (
-    <div className="bg-background max-w-7xl mx-auto space-y-8">
+    <div className="bg-secondary max-w-7xl mx-auto space-y-8">
       {/* Header */}
       <div>
         <h1 className="text-foreground mb-2">Visão Geral</h1>
@@ -139,11 +139,11 @@ export default function Dashboard({ currentUser }: DashboardProps) {
           <div key={index} className="bg-background rounded-2xl p-6 border border-slate-200 hover:shadow-lg transition-shadow">
             <div className="flex items-start justify-between mb-4">
               <div className={`${stat.color} w-12 h-12 rounded-xl flex items-center justify-center`}>
-                <stat.icon className="w-6 h-6 text-white" />
+                <stat.icon className="w-6 h-6 text-foreground" />
               </div>
             </div>
-            <p className="text-slate-600 mb-1">{stat.label}</p>
-            <p className="text-slate-900">{stat.value}</p>
+            <p className="text-muted-foreground mb-1">{stat.label}</p>
+            <p className="text-foreground">{stat.value}</p>
           </div>
         ))}
       </div>
@@ -157,18 +157,18 @@ export default function Dashboard({ currentUser }: DashboardProps) {
               <CheckCircle className="w-5 h-5 text-white" />
             </div>
             <div className="flex-1">
-              <p className="text-slate-900">Diagnóstico Aprovado</p>
-              <p className="text-slate-600">Paciente: Carlos Oliveira - 10/12/2025</p>
+              <p className="text-foreground">Diagnóstico Aprovado</p>
+              <p className="text-muted-foreground">Paciente: Carlos Oliveira - 10/12/2025</p>
             </div>
           </div>
           
           <div className="flex items-center gap-4 p-4 bg-orange-50 rounded-xl border border-orange-100">
             <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center">
-              <Activity className="w-5 h-5 text-white" />
+              <Activity className="w-5 h-5 text-foreground" />
             </div>
             <div className="flex-1">
-              <p className="text-slate-900">Análise Pendente</p>
-              <p className="text-slate-600">Paciente: Roberto Santos Junior - 09/12/2025</p>
+              <p className="text-foreground">Análise Pendente</p>
+              <p className="text-muted-foreground">Paciente: Roberto Santos Junior - 09/12/2025</p>
             </div>
           </div>
           
@@ -177,8 +177,8 @@ export default function Dashboard({ currentUser }: DashboardProps) {
               <CheckCircle className="w-5 h-5 text-white" />
             </div>
             <div className="flex-1">
-              <p className="text-slate-900">Diagnóstico Aprovado</p>
-              <p className="text-slate-600">Paciente: Ana Paula Costa - 09/12/2025</p>
+              <p className="text-foreground">Diagnóstico Aprovado</p>
+              <p className="text-muted-foreground">Paciente: Ana Paula Costa - 09/12/2025</p>
             </div>
           </div>
 
@@ -187,8 +187,8 @@ export default function Dashboard({ currentUser }: DashboardProps) {
               <XCircle className="w-5 h-5 text-white" />
             </div>
             <div className="flex-1">
-              <p className="text-slate-900">Análise Negada</p>
-              <p className="text-slate-600">Paciente: Ana Paula Costa - 10/12/2025 (Artefatos técnicos)</p>
+              <p className="text-foreground">Análise Negada</p>
+              <p className="text-muted-foreground">Paciente: Ana Paula Costa - 10/12/2025 (Artefatos técnicos)</p>
             </div>
           </div>
 
@@ -197,8 +197,8 @@ export default function Dashboard({ currentUser }: DashboardProps) {
               <CheckCircle className="w-5 h-5 text-white" />
             </div>
             <div className="flex-1">
-              <p className="text-slate-900">Diagnóstico Aprovado</p>
-              <p className="text-slate-600">Paciente: Pedro Henrique Alves - 12/12/2025</p>
+              <p className="text-foreground">Diagnóstico Aprovado</p>
+              <p className="text-muted-foreground">Paciente: Pedro Henrique Alves - 12/12/2025</p>
             </div>
           </div>
         </div>

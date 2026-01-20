@@ -60,14 +60,14 @@ export default function Permissoes() {
 
       {/* Info Cards - Níveis de Acesso */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-white rounded-2xl p-6 border border-slate-200">
+        <div className="bg-background rounded-2xl p-6 border border-slate-200">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
               <Shield className="w-6 h-6 text-purple-600" />
             </div>
             <div>
-              <h3 className="text-slate-900">ADM</h3>
-              <p className="text-slate-600">Acesso Total</p>
+              <h3 className="text-foreground">ADM</h3>
+              <p className="text-muted-foreground">Acesso Total</p>
             </div>
           </div>
           <ul className="space-y-2 text-slate-700">

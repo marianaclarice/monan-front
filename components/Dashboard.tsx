@@ -43,14 +43,14 @@ export default function Dashboard({ currentUser }: DashboardProps) {
   // Dashboard para Admin
   if (isAdmin) {
     return (
-      <div className="max-w-7xl mx-auto space-y-8">
+      <div className="bg-background max-w-7xl mx-auto space-y-8">
         {/* Header */}
         <div>
-          <h1 className="text-slate-900 mb-2">Dashboard</h1>
-          <p className="text-slate-600">
+          <h1 className="text-foreground mb-2">Dashboard</h1>
+          <p className="text-muted-foreground">
             Sistema de Diagnóstico de Autismo (TEA) Assistido por IA - Análise de EEG
           </p>
-          <p className="text-slate-500 mt-1">
+          <p className="text-muted-foreground mt-1">
             Bem-vindo, {currentUser?.nome} • Modo Administrador
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function Dashboard({ currentUser }: DashboardProps) {
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {statsAdmin.map((stat, index) => (
-            <div key={index} className="bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-lg transition-shadow">
+            <div key={index} className="bg-muted rounded-3xl p-6 border border-slate-200 hover:shadow-lg transition-shadow">
               <div className="flex items-start justify-between mb-4">
                 <div className={`${stat.color} w-12 h-12 rounded-xl flex items-center justify-center`}>
                   <stat.icon className="w-6 h-6 text-white" />
@@ -121,11 +121,11 @@ export default function Dashboard({ currentUser }: DashboardProps) {
 
   // Dashboard simplificado para Médico (Visão Geral)
   return (
-    <div className="max-w-7xl mx-auto space-y-8">
+    <div className="bg-background max-w-7xl mx-auto space-y-8">
       {/* Header */}
       <div>
-        <h1 className="text-slate-900 mb-2">Visão Geral</h1>
-        <p className="text-slate-600">
+        <h1 className="text-foreground mb-2">Visão Geral</h1>
+        <p className="text-muted-foreground">
           Bem-vindo ao Sistema MONAN - Suas análises e pacientes
         </p>
         <p className="text-slate-500 mt-1">
@@ -136,7 +136,7 @@ export default function Dashboard({ currentUser }: DashboardProps) {
       {/* Stats Cards para Médico */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {statsMedico.map((stat, index) => (
-          <div key={index} className="bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-lg transition-shadow">
+          <div key={index} className="bg-background rounded-2xl p-6 border border-slate-200 hover:shadow-lg transition-shadow">
             <div className="flex items-start justify-between mb-4">
               <div className={`${stat.color} w-12 h-12 rounded-xl flex items-center justify-center`}>
                 <stat.icon className="w-6 h-6 text-white" />
@@ -149,8 +149,8 @@ export default function Dashboard({ currentUser }: DashboardProps) {
       </div>
 
       {/* Atividades Recentes */}
-      <div className="bg-white rounded-2xl p-6 border border-slate-200">
-        <h2 className="text-slate-900 mb-4">Atividades Recentes</h2>
+      <div className="bg-background rounded-2xl p-6 border border-slate-200">
+        <h2 className="text-foreground mb-4">Atividades Recentes</h2>
         <div className="space-y-3">
           <div className="flex items-center gap-4 p-4 bg-green-50 rounded-xl border border-green-100">
             <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center">

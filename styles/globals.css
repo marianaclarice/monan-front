@@ -185,6 +185,12 @@
       font-weight: var(--font-weight-normal);
       line-height: 1.5;
     }
+
+    select{
+      background-color: #030213;
+
+      opition
+    }
   }
 }
 

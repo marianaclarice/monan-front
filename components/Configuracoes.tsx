@@ -165,8 +165,8 @@ export default function Configuracoes() {
               <p className="text-slate-900">Tema</p>
               <p className="text-slate-600">Escolha entre claro e escuro</p>
             </div>
-            <select className="px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-black">
-              <option>Claro</option>
+            <select className="px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg">
+              <option >Claro</option>
               <option>Escuro</option>
               <option>Automático</option>
             </select>

@@ -43,8 +43,8 @@ export default function GestaoLaudos({ currentUser }: GestaoLaudosProps) {
     <div className="max-w-7xl mx-auto space-y-6">
       {/* Header */}
       <div>
-        <h1 className="text-slate-900 mb-2">Diagnósticos Assistidos por IA</h1>
-        <p className="text-slate-600">Análise de EEG para detecção de TEA com revisão médica</p>
+        <h1 className="text-foreground mb-2">Diagnósticos Assistidos por IA</h1>
+        <p className="text-muted-foreground">Análise de EEG para detecção de TEA com revisão médica</p>
       </div>
 
       {/* Filters */}

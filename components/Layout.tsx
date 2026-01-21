@@ -189,9 +189,9 @@ export default function Layout({
                   className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${
                     isActive(item.path)
                       ? currentUser?.perfil === "ADM"
-                        ? "bg-blue-600 text-foreground shadow-lg"
+                        ? "bg-sidebar-primary text-foreground shadow-lg"
                         : "bg-green-600 text-foreground shadow-lg"
-                      : "text-foreground hover:bg-slate-100"
+                      : "text-foreground hover:bg-accent"
                   }`}
                 >
                   <item.icon className="w-5 h-5" />

@@ -73,8 +73,8 @@ export default function GestaoPacientes() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-slate-900 mb-2">Gestão de Pacientes</h1>
-          <p className="text-slate-600">Crianças em avaliação para diagnóstico de autismo (TEA)</p>
+          <h1 className="text-foreground mb-2">Gestão de Pacientes</h1>
+          <p className="text-muted-foreground">Crianças em avaliação para diagnóstico de autismo (TEA)</p>
         </div>
         <button 
           onClick={() => setShowNewModal(true)}

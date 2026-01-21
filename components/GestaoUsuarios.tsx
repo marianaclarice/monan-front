@@ -17,7 +17,7 @@ export default function GestaoUsuarios() {
 
   const filteredUsuarios = usuarios.filter(user => {
     const matchSearch = user.nome.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                       user.email.toLowerCase().includes(searchTerm.toLowerCase());
+    user.email.toLowerCase().includes(searchTerm.toLowerCase());
     const matchPerfil = filterPerfil === 'Todos' || user.perfil === filterPerfil;
     return matchSearch && matchPerfil;
   });
@@ -42,7 +42,7 @@ export default function GestaoUsuarios() {
         </div>
         <button 
           onClick={() => setShowModal(true)}
-          className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl"
+          className="flex items-center gap-2 bg-sidebar-primary text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl"
         >
           <Plus className="w-5 h-5" />
           Registrar Usuário

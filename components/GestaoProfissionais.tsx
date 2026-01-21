@@ -82,10 +82,10 @@ export default function GestaoProfissionais() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-slate-900 mb-2">
+          <h1 className="text-foreground mb-2">
             Gestão de Médicos
           </h1>
-          <p className="text-slate-600">
+          <p className="text-muted-foreground">
             Profissionais autorizados a revisar diagnósticos de
             autismo
           </p>

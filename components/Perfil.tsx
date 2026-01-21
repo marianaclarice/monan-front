@@ -39,8 +39,8 @@ export default function Perfil({ currentUser }: PerfilProps) {
     <div className="max-w-4xl mx-auto space-y-6">
       {/* Header */}
       <div>
-        <h1 className="text-slate-900 mb-2">Meu Perfil</h1>
-        <p className="text-slate-600">Gerencie suas informações profissionais</p>
+        <h1 className="text-foreground mb-2">Meu Perfil</h1>
+        <p className="text-muted-foreground">Gerencie suas informações profissionais</p>
       </div>
 
       {/* Card de Perfil */}

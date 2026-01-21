@@ -100,15 +100,15 @@ export default function GestaoProfissionais() {
       </div>
 
       {/* Search */}
-      <div className="bg-white rounded-2xl p-6 border border-slate-200">
+      <div className="bg-background rounded-2xl p-6 border border-slate-200">
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-foreground" />
           <input
             type="text"
             placeholder="Buscar por nome, CRM ou especialidade..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 text-black"
+            className="w-full pl-11 pr-4 py-3 bg-muted border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 text-foreground"
           />
         </div>
       </div>
@@ -128,8 +128,8 @@ export default function GestaoProfissionais() {
                     <Stethoscope className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="mb-1">{prof.nome}</h3>
-                    <p className="text-green-100">
+                    <h3 className="mb-1 bg-gradient-to-r from-green-600 to-green-500">{prof.nome}</h3>
+                    <p className="mb-1 bg-gradient-to-r from-green-600 to-green-500" text-foreground>
                       {prof.especialidade}
                     </p>
                   </div>
@@ -143,30 +143,28 @@ export default function GestaoProfissionais() {
             </div>
 
             {/* Body Card */}
-            <div className="p-6 space-y-4">
+            <div className="bg-muted p-6 space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <p className="text-slate-500 mb-1">CRM</p>
-                  <p className="text-slate-900">{prof.crm}</p>
+                  <p className="bg-muted text-foreground mb-1">CRM</p>
+                  <p className="bg-muted text-muted-foreground">{prof.crm}</p>
                 </div>
                 <div>
-                  <p className="text-slate-500 mb-1">
-                    Credencial
-                  </p>
-                  <p className="text-slate-900">
+                  <p className="bg-muted text-foreground mb-1">Credencial</p>
+                  <p className="bg-muted text-muted-foreground">
                     {prof.credencial}
                   </p>
                 </div>
               </div>
 
               <div>
-                <p className="text-slate-500 mb-1">Email</p>
-                <p className="text-slate-900">{prof.email}</p>
+                <p className="text-foreground mb-1">Email</p>
+                <p className="text-muted-foreground">{prof.email}</p>
               </div>
 
               <div className="flex items-center gap-2 pt-2 border-t border-slate-200">
                 <FileText className="w-5 h-5 text-blue-600" />
-                <span className="text-slate-700">
+                <span className="text-muted-foreground">
                   <strong>{prof.diagnosticosRevisados}</strong>{" "}
                   diagnósticos revisados
                 </span>
@@ -293,7 +291,7 @@ export default function GestaoProfissionais() {
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 px-6 py-3 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-colors"
+                  className="flex-1 px-6 py-3 bg-green-600 text-foreground rounded-xl hover:bg-green-700 transition-colors"
                 >
                   Cadastrar
                 </button>
@@ -306,10 +304,10 @@ export default function GestaoProfissionais() {
       {/* Modal Diagnósticos do Profissional */}
       {selectedProfissional !== null && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-2xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="bg-background rounded-2xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between mb-6">
               <div>
-                <h2 className="text-slate-900 mb-1">
+                <h2 className="text-foreground mb-1">
                   Diagnósticos Revisados
                 </h2>
                 <p className="text-slate-600">

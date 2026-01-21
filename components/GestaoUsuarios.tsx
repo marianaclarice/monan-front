@@ -37,8 +37,8 @@ export default function GestaoUsuarios() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-slate-900 mb-2">Gestão de Usuários</h1>
-          <p className="text-slate-600">Gerencie todos os usuários do sistema</p>
+          <h1 className="text-foreground mb-2">Gestão de Usuários</h1>
+          <p className="text-muted-foreground">Gerencie todos os usuários do sistema</p>
         </div>
         <button 
           onClick={() => setShowModal(true)}

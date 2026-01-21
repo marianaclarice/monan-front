@@ -191,7 +191,7 @@ export default function Layout({
                       ? currentUser?.perfil === "ADM"
                         ? "bg-blue-600 text-foreground shadow-lg"
                         : "bg-green-600 text-foreground shadow-lg"
-                      : "text-slate-700 hover:bg-slate-100"
+                      : "text-foreground hover:bg-slate-100"
                   }`}
                 >
                   <item.icon className="w-5 h-5" />

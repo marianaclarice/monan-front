@@ -54,8 +54,8 @@ export default function Permissoes() {
     <div className="max-w-7xl mx-auto space-y-6">
       {/* Header */}
       <div>
-        <h1 className="text-slate-900 mb-2">Permissões e Acessos</h1>
-        <p className="text-slate-600">Gerencie os níveis de acesso dos usuários</p>
+        <h1 className="text-foreground mb-2">Permissões e Acessos</h1>
+        <p className="text-muted-foreground">Gerencie os níveis de acesso dos usuários</p>
       </div>
 
       {/* Info Cards - Níveis de Acesso */}

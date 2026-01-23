@@ -55,22 +55,22 @@ export default function Permissoes() {
       {/* Header */}
       <div>
         <h1 className="text-slate-900 mb-2">Permissões e Acessos</h1>
-        <p className="text-slate-600">Gerencie os níveis de acesso dos usuários</p>
+        <p className="text-foreground">Gerencie os níveis de acesso dos usuários</p>
       </div>
 
       {/* Info Cards - Níveis de Acesso */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-white rounded-2xl p-6 border border-slate-200">
+        <div className="bg-card rounded-2xl p-6 border border-sidebar-border">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
               <Shield className="w-6 h-6 text-purple-600" />
             </div>
             <div>
-              <h3 className="text-slate-900">ADM</h3>
-              <p className="text-slate-600">Acesso Total</p>
+              <h3 className="text-foreground">ADM</h3>
+              <p className="text-muted-foreground">Acesso Total</p>
             </div>
           </div>
-          <ul className="space-y-2 text-slate-700">
+          <ul className="space-y-2 text-muted-foreground">
             <li className="flex items-center gap-2">
               <div className="w-1.5 h-1.5 bg-purple-600 rounded-full"></div>
               Gerenciar todos os módulos
@@ -86,17 +86,17 @@ export default function Permissoes() {
           </ul>
         </div>
 
-        <div className="bg-white rounded-2xl p-6 border border-slate-200">
+        <div className="bg-card rounded-2xl p-6 border border-sidebar-border">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
               <Stethoscope className="w-6 h-6 text-green-600" />
             </div>
             <div>
-              <h3 className="text-slate-900">Profissional</h3>
-              <p className="text-slate-600">Acesso Limitado</p>
+              <h3 className="text-foreground">Profissional</h3>
+              <p className="text-muted-foreground">Acesso Limitado</p>
             </div>
           </div>
-          <ul className="space-y-2 text-slate-700">
+          <ul className="space-y-2 text-muted-foreground">
             <li className="flex items-center gap-2">
               <div className="w-1.5 h-1.5 bg-green-600 rounded-full"></div>
               Criar e editar laudos
@@ -112,17 +112,17 @@ export default function Permissoes() {
           </ul>
         </div>
 
-        <div className="bg-white rounded-2xl p-6 border border-slate-200">
+        <div className="bg-card rounded-2xl p-6 border border-sidebar-border">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
               <UserCircle className="w-6 h-6 text-blue-600" />
             </div>
             <div>
-              <h3 className="text-slate-900">Paciente</h3>
-              <p className="text-slate-600">Somente Leitura</p>
+              <h3 className="text-foreground">Paciente</h3>
+              <p className="text-muted-foreground">Somente Leitura</p>
             </div>
           </div>
-          <ul className="space-y-2 text-slate-700">
+          <ul className="space-y-2 text-muted-foreground">
             <li className="flex items-center gap-2">
               <div className="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
               Visualizar próprios laudos
@@ -144,7 +144,7 @@ export default function Permissoes() {
         {permissoes.map((perm) => {
           const IconComponent = getPerfilIcon(perm.perfil);
           return (
-            <div key={perm.usuarioId} className="bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow">
+            <div key={perm.usuarioId} className="bg-background rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow">
               {/* Header */}
               <div className={`bg-gradient-to-r ${getPerfilColor(perm.perfil)} p-6 text-white`}>
                 <div className="flex items-center justify-between">
@@ -170,7 +170,7 @@ export default function Permissoes() {
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <Lock className="w-5 h-5 text-slate-400" />
-                  <h4 className="text-slate-900">Permissões Concedidas</h4>
+                  <h4 className="text-foreground">Permissões Concedidas</h4>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {perm.permissoes.map((permissao, index) => (
@@ -189,8 +189,8 @@ export default function Permissoes() {
       </div>
 
       {/* Diagrama de Relacionamentos */}
-      <div className="bg-white rounded-2xl p-8 border border-slate-200">
-        <h2 className="text-slate-900 mb-6">Estrutura de Relacionamentos</h2>
+      <div className="bg-card rounded-2xl p-8 border border-sidebar-border">
+        <h2 className="text-foreground mb-6">Estrutura de Relacionamentos</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Usuario */}
           <div className="space-y-4">
@@ -207,7 +207,7 @@ export default function Permissoes() {
                 <li>• perfil</li>
               </ul>
             </div>
-            <div className="text-center text-slate-600">
+            <div className="text-center text-foreground">
               ↓ 1:1
             </div>
             <div className="bg-blue-50 rounded-xl p-6 border-2 border-blue-200">
@@ -238,7 +238,7 @@ export default function Permissoes() {
                 <li>• diagnostico</li>
               </ul>
             </div>
-            <div className="text-center text-slate-600">
+            <div className="text-center text-foreground">
               ↓ 1:N
             </div>
             <div className="bg-orange-50 rounded-xl p-6 border-2 border-orange-200">
@@ -271,7 +271,7 @@ export default function Permissoes() {
                 <li>• credencial</li>
               </ul>
             </div>
-            <div className="text-center text-slate-600">
+            <div className="text-center text-foreground">
               ↓ 1:N
             </div>
             <div className="bg-orange-50 rounded-xl p-6 border-2 border-orange-200">

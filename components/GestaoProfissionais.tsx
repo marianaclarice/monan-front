@@ -100,7 +100,7 @@ export default function GestaoProfissionais() {
       </div>
 
       {/* Search */}
-      <div className="bg-background rounded-2xl p-6 border border-slate-200">
+      <div className="bg-background rounded-2xl p-6 border border-sidebar-border">
         <div className="relative">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-foreground" />
           <input
@@ -108,7 +108,7 @@ export default function GestaoProfissionais() {
             placeholder="Buscar por nome, CRM ou especialidade..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-11 pr-4 py-3 bg-muted border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 text-foreground"
+            className="w-full pl-11 pr-4 py-3 bg-background border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 text-foreground"
           />
         </div>
       </div>
@@ -118,7 +118,7 @@ export default function GestaoProfissionais() {
         {filteredProfissionais.map((prof) => (
           <div
             key={prof.id}
-            className="bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow"
+            className="bg-white rounded-2xl border border-sidebar-border overflow-hidden hover:shadow-lg transition-shadow"
           >
             {/* Header Card */}
             <div className="bg-gradient-to-r from-green-600 to-green-500 p-6 text-white">
@@ -176,7 +176,7 @@ export default function GestaoProfissionais() {
                   onClick={() =>
                     setSelectedProfissional(prof.id)
                   }
-                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors"
+                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-sidebar-primary text-foreground rounded-lg hover:bg-muted-foreground transition-colors"
                 >
                   <FileText className="w-4 h-4" />
                   Ver Diagnósticos
@@ -199,16 +199,16 @@ export default function GestaoProfissionais() {
       {/* Modal Novo Profissional */}
       {showModal && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-2xl p-8 max-w-lg w-full max-h-[90vh] overflow-y-auto">
+          <div className="bg-card rounded-2xl p-8 max-w-lg w-full max-h-[90vh] overflow-y-auto">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
                 <Stethoscope className="w-6 h-6 text-green-600" />
               </div>
               <div>
-                <h2 className="text-slate-900">
+                <h2 className="text-foreground">
                   Novo Médico Revisor
                 </h2>
-                <p className="text-slate-600">
+                <p className="text-muted-foreground">
                   Cadastre um médico autorizado
                 </p>
               </div>
@@ -216,66 +216,66 @@ export default function GestaoProfissionais() {
 
             <form className="space-y-4">
               <div>
-                <label className="block text-slate-700 mb-2">
+                <label className="block text-foreground mb-2">
                   Nome Completo
                 </label>
                 <input
                   type="text"
                   placeholder="Dr(a). Nome do médico"
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 text-black"
+                  className="w-full px-4 py-3 bg-background border border-sidebar-border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 text-muted-foreground"
                 />
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-slate-700 mb-2">
+                  <label className="block text-foreground mb-2">
                     CRM
                   </label>
                   <input
                     type="text"
                     placeholder="CRM/UF 123456"
-                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 text-black"
+                    className="w-full px-4 py-3 bg-background border border-sidebar-border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 text-muted-foreground"
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-700 mb-2">
+                  <label className="block text-foreground mb-2">
                     Especialidade
                   </label>
                   <input
                     type="text"
                     placeholder="Ex: Neurologia"
-                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 text-black"
+                    className="w-full px-4 py-3 bg-background border border-sidebar-border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 text-muted-foreground"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-slate-700 mb-2">
+                <label className="block text-foreground mb-2">
                   Credencial na Rede
                 </label>
                 <input
                   type="text"
                   placeholder="CRED-YYYY-XXX"
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 text-black"
+                  className="w-full px-4 py-3 bg-background border border-sidebar-border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 text-muted-background"
                 />
               </div>
 
               <div>
-                <label className="block text-slate-700 mb-2">
+                <label className="block text-foreground mb-2">
                   Email
                 </label>
                 <input
                   type="email"
                   placeholder="email@monan.com"
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 text-black"
+                  className="w-full px-4 py-3 bg-background border border-sidebar-border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 text-muted-foreground"
                 />
               </div>
 
               <div>
-                <label className="block text-slate-700 mb-2">
+                <label className="block text-foreground mb-2">
                   Status
                 </label>
-                <select className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 text-black">
+                <select className="w-full px-4 py-3 bg-background border border-sidebar-border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 text-muted-foreground">
                   <option>Ativo</option>
                   <option>Suspenso</option>
                 </select>
@@ -310,7 +310,7 @@ export default function GestaoProfissionais() {
                 <h2 className="text-foreground mb-1">
                   Diagnósticos Revisados
                 </h2>
-                <p className="text-slate-600">
+                <p className="text-muted-foreground">
                   {
                     profissionais.find(
                       (p) => p.id === selectedProfissional,
@@ -330,18 +330,18 @@ export default function GestaoProfissionais() {
               {[1, 2, 3, 4, 5].map((i) => (
                 <div
                   key={i}
-                  className="p-4 bg-slate-50 rounded-xl border border-slate-200"
+                  className="p-4 bg-card rounded-xl border border-sidebar-border"
                 >
                   <div className="flex items-center justify-between mb-2">
                     <div>
-                      <p className="text-slate-900">
+                      <p className="text-foreground">
                         Diagnóstico #{1000 + i}
                       </p>
-                      <p className="text-slate-600">
+                      <p className="text-muted-foreground">
                         Paciente: João da Silva
                       </p>
                     </div>
-                    <span className="text-slate-500">
+                    <span className="text-muted-foreground">
                       08/12/2025
                     </span>
                   </div>

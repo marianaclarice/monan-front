@@ -24,7 +24,7 @@ export default function Configuracoes() {
       </div>
 
       {/* Sistema */}
-      <div className="bg-background rounded-2xl border border-slate-200 overflow-hidden">
+      <div className="bg-background rounded-2xl border border-sidebar-border overflow-hidden">
         <div className="bg-background px-6 py-4 border-b border-slate-200">
           <div className="flex items-center gap-3">
             <Settings className="w-5 h-5 text-foreground" />
@@ -37,7 +37,7 @@ export default function Configuracoes() {
               <p className="text-foreground">Nome do Sistema</p>
               <p className="text-muted-foreground">SISTEMA MONAN</p>
             </div>
-            <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+            <button className="px-4 py-2 bg-sidebar-primary text-white rounded-lg hover:bg-blue-700 transition-colors">
               Editar
             </button>
           </div>
@@ -60,7 +60,7 @@ export default function Configuracoes() {
       </div>
 
       {/* Notificações */}
-      <div className="bg-background rounded-2xl border border-slate-200 overflow-hidden">
+      <div className="bg-background rounded-2xl border border-sidebar-border overflow-hidden">
         <div className="bg-background px-6 py-4 border-b border-slate-200">
           <div className="flex items-center gap-3">
             <Bell className="w-5 h-5 text-foreground" />
@@ -75,7 +75,7 @@ export default function Configuracoes() {
             </div>
             <label className="relative inline-flex items-center cursor-pointer">
               <input type="checkbox" className="sr-only peer" defaultChecked />
-              <div className="w-11 h-6 bg-muted peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+              <div className="w-11 h-6 bg-muted peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-sidebar-primary"></div>
             </label>
           </div>
           <div className="flex items-center justify-between pt-4 border-t border-slate-200">
@@ -85,14 +85,14 @@ export default function Configuracoes() {
             </div>
             <label className="relative inline-flex items-center cursor-pointer">
               <input type="checkbox" className="sr-only peer" defaultChecked />
-              <div className="w-11 h-6 bg-muted peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+              <div className="w-11 h-6 bg-muted peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-sidebar-primary"></div>
             </label>
           </div>
         </div>
       </div>
 
       {/* Segurança */}
-      <div className="bg-background rounded-2xl border border-slate-200 overflow-hidden">
+      <div className="bg-background rounded-2xl border border-sidebar-border overflow-hidden">
         <div className="bg-background px-6 py-4 border-b border-slate-200">
           <div className="flex items-center gap-3">
             <Lock className="w-5 h-5 text-foreground" />
@@ -107,7 +107,7 @@ export default function Configuracoes() {
             </div>
             <label className="relative inline-flex items-center cursor-pointer">
               <input type="checkbox" className="sr-only peer" />
-              <div className="w-11 h-6 bg-muted peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+              <div className="w-11 h-6 bg-muted peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-sidebar-primary"></div>
             </label>
           </div>
           <div className="flex items-center justify-between pt-4 border-t border-slate-200">
@@ -135,7 +135,7 @@ export default function Configuracoes() {
       </div>
 
       {/* Backup */}
-      <div className="bg-background rounded-2xl border border-slate-200 overflow-hidden">
+      <div className="bg-background rounded-2xl border border-sidear-border overflow-hidden">
         <div className="px-6 py-4 border-b border-slate-200">
           <div className="flex items-center gap-3">
             <Database className="w-5 h-5" />
@@ -150,7 +150,7 @@ export default function Configuracoes() {
             </div>
             <label className="relative inline-flex items-center cursor-pointer">
               <input type="checkbox" className="sr-only peer" defaultChecked />
-              <div className="w-11 h-6 bg-muted peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+              <div className="w-11 h-6 bg-muted peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-sidebar-primary"></div>
             </label>
           </div>
           <div className="flex items-center justify-between pt-4 border-t border-slate-200">
@@ -166,7 +166,7 @@ export default function Configuracoes() {
       </div>
 
       {/* Aparência */}
-      <div className="bg-background rounded-2xl border border-slate-200 overflow-hidden">
+      <div className="bg-background rounded-2xl border border-sidebar-border overflow-hidden">
         <div className="bg-background px-6 py-4 border-b border-slate-200">
           <div className="flex items-center gap-3">
             <Palette className="w-5 h-5 text-foreground" />
@@ -189,7 +189,7 @@ export default function Configuracoes() {
       </div>
 
       {/* Idioma */}
-      <div className="bg-background rounded-2xl border border-slate-200 overflow-hidden">
+      <div className="bg-background rounded-2xl border border-sidebar-border overflow-hidden">
         <div className="bg-background px-6 py-4 border-b border-slate-200">
           <div className="flex items-center gap-3">
             <Globe className="w-5 h-5 text-foreground" />

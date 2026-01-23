@@ -53,8 +53,8 @@ export default function Perfil({ currentUser }: PerfilProps) {
             </div>
             <div>
               <h2 className="mb-1">{currentUser?.nome}</h2>
-              <p className="text-green-100">{currentUser?.crm}</p>
-              <p className="text-green-100">{currentUser?.especialidade}</p>
+              <p className="text-muted-foreground">{currentUser?.crm}</p>
+              <p className="text-muted-foreground">{currentUser?.especialidade}</p>
             </div>
           </div>
         </div>

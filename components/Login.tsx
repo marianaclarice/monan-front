@@ -137,7 +137,7 @@ export default function Login({ onLogin }: LoginProps) {
             <p className="text-foreground font-semibold mb-3 text-center">
               Usuários de Demonstração:
             </p>
-            <div className="space-y-2 text-muted">
+            <div className="space-y-2 text-muted-foreground">
               <div className="bg-blue-50 p-3 rounded-lg">
                 <p className="font-semibold text-blue-800">
                   👨‍💼 Administrador

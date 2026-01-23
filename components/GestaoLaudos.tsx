@@ -48,7 +48,7 @@ export default function GestaoLaudos({ currentUser }: GestaoLaudosProps) {
       </div>
 
       {/* Filters */}
-      <div className="bg-white rounded-2xl p-6 border border-slate-200">
+      <div className="bg-background rounded-2xl p-6 border border-sidebar-border">
         <div className="flex flex-col md:flex-row gap-4">
           {/* Search */}
           <div className="flex-1 relative">
@@ -58,7 +58,7 @@ export default function GestaoLaudos({ currentUser }: GestaoLaudosProps) {
               placeholder="Buscar por ID, paciente ou médico..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 text-black"
+              className="w-full pl-11 pr-4 py-3 bg-background border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 text-foreground"
             />
           </div>
 
@@ -68,7 +68,7 @@ export default function GestaoLaudos({ currentUser }: GestaoLaudosProps) {
             <select
               value={filterStatus}
               onChange={(e) => setFilterStatus(e.target.value)}
-              className="px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 text-black"
+              className="px-4 py-3 bg-background border border-sidebar-border rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 text-foreground"
             >
               <option>Todos</option>
               <option>Aprovado</option>
@@ -81,56 +81,56 @@ export default function GestaoLaudos({ currentUser }: GestaoLaudosProps) {
 
       {/* Stats */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-white rounded-2xl p-6 border border-slate-200">
+        <div className="bg-background rounded-2xl p-6 border border-sidebar-border">
           <div className="flex items-center gap-3 mb-2">
             <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
               <Brain className="w-5 h-5 text-blue-600" />
             </div>
-            <span className="text-slate-600">Total de Diagnósticos IA</span>
+            <span className="text-muted-foreground">Total de Diagnósticos IA</span>
           </div>
-          <p className="text-slate-900">1,234</p>
+          <p className="text-foreground">1,234</p>
         </div>
-        <div className="bg-white rounded-2xl p-6 border border-slate-200">
+        <div className="bg-background rounded-2xl p-6 border border-sidebar-border">
           <div className="flex items-center gap-3 mb-2">
             <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center">
               <CheckCircle className="w-5 h-5 text-green-600" />
             </div>
-            <span className="text-slate-600">Aprovados por Médicos</span>
+            <span className="text-muted-foreground">Aprovados por Médicos</span>
           </div>
-          <p className="text-slate-900">1,089 (88%)</p>
+          <p className="text-foreground">1,089 (88%)</p>
         </div>
-        <div className="bg-white rounded-2xl p-6 border border-slate-200">
+        <div className="bg-background rounded-2xl p-6 border border-sidebar-border">
           <div className="flex items-center gap-3 mb-2">
             <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center">
               <Clock className="w-5 h-5 text-orange-600" />
             </div>
-            <span className="text-slate-600">Aguardando Revisão</span>
+            <span className="text-muted-foreground">Aguardando Revisão</span>
           </div>
-          <p className="text-slate-900">78 (6%)</p>
+          <p className="text-foreground">78 (6%)</p>
         </div>
       </div>
 
       {/* Table */}
-      <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+      <div className="bg-background rounded-2xl border border-sidebar-border overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full">
-            <thead className="bg-slate-50 border-b border-slate-200">
+            <thead className="bg-background border-b border-slate-200">
               <tr>
-                <th className="px-6 py-4 text-left text-slate-700">ID</th>
-                <th className="px-6 py-4 text-left text-slate-700">Paciente</th>
-                <th className="px-6 py-4 text-left text-slate-700">Data Análise IA</th>
-                <th className="px-6 py-4 text-left text-slate-700">Similaridade TEA</th>
-                {!isMedico && <th className="px-6 py-4 text-left text-slate-700">Médico Revisor</th>}
-                <th className="px-6 py-4 text-left text-slate-700">Status Revisão</th>
-                <th className="px-6 py-4 text-left text-slate-700">Ações</th>
+                <th className="px-6 py-4 text-left text-foreground">ID</th>
+                <th className="px-6 py-4 text-left text-foreground">Paciente</th>
+                <th className="px-6 py-4 text-left text-foreground">Data Análise IA</th>
+                <th className="px-6 py-4 text-left text-foreground">Similaridade TEA</th>
+                {!isMedico && <th className="px-6 py-4 text-left text-foreground">Médico Revisor</th>}
+                <th className="px-6 py-4 text-left text-foreground">Status Revisão</th>
+                <th className="px-6 py-4 text-left text-foreground">Ações</th>
               </tr>
             </thead>
             <tbody>
               {filteredDiagnosticos.map((diag) => (
-                <tr key={diag.id} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
-                  <td className="px-6 py-4 text-slate-900">#{diag.id}</td>
-                  <td className="px-6 py-4 text-slate-900">{diag.pacienteNome}</td>
-                  <td className="px-6 py-4 text-slate-600">
+                <tr key={diag.id} className="border-b border-slate-100 hover:bg-accent transition-colors">
+                  <td className="px-6 py-4 text-muted-foreground">#{diag.id}</td>
+                  <td className="px-6 py-4 text-muted-foreground">{diag.pacienteNome}</td>
+                  <td className="px-6 py-4 text-muted-foreground">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4 text-slate-400" />
                       {diag.dataAnalise}
@@ -143,7 +143,7 @@ export default function GestaoLaudos({ currentUser }: GestaoLaudosProps) {
                   </td>
                   {!isMedico && (
                     <td className="px-6 py-4">
-                      <p className="text-slate-900">{diag.medicoRevisorNome || 'Aguardando'}</p>
+                      <p className="text-muted-foreground">{diag.medicoRevisorNome || 'Aguardando'}</p>
                     </td>
                   )}
                   <td className="px-6 py-4">

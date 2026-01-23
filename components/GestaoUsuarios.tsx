@@ -50,7 +50,7 @@ export default function GestaoUsuarios() {
       </div>
 
       {/* Filters */}
-      <div className="bg-white rounded-2xl p-6 border border-slate-200">
+      <div className="bg-background rounded-2xl p-6 border border-switch-background">
         <div className="flex flex-col md:flex-row gap-4">
           {/* Search */}
           <div className="flex-1 relative">
@@ -60,7 +60,7 @@ export default function GestaoUsuarios() {
               placeholder="Buscar por nome ou email..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+              className="w-full pl-11 pr-4 py-3 bg-background border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-foreground"
             />
           </div>
 
@@ -70,7 +70,7 @@ export default function GestaoUsuarios() {
             <select
               value={filterPerfil}
               onChange={(e) => setFilterPerfil(e.target.value)}
-              className="px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+              className="px-4 py-3 bg-background border border-switch-background rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-foreground"
             >
               <option>Todos</option>
               <option>Administrador</option>
@@ -82,25 +82,25 @@ export default function GestaoUsuarios() {
       </div>
 
       {/* Table */}
-      <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+      <div className="bg-background rounded-2xl border border-switch-background overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full">
-            <thead className="bg-slate-50 border-b border-slate-200">
+            <thead className="bg-background border-b border-slate-200">
               <tr>
-                <th className="px-6 py-4 text-left text-slate-700">ID</th>
-                <th className="px-6 py-4 text-left text-slate-700">Nome</th>
-                <th className="px-6 py-4 text-left text-slate-700">Email</th>
-                <th className="px-6 py-4 text-left text-slate-700">Perfil</th>
-                <th className="px-6 py-4 text-left text-slate-700">Status</th>
-                <th className="px-6 py-4 text-left text-slate-700">Ações</th>
+                <th className="px-6 py-4 text-left text-foreground">ID</th>
+                <th className="px-6 py-4 text-left text-foreground">Nome</th>
+                <th className="px-6 py-4 text-left text-foreground">Email</th>
+                <th className="px-6 py-4 text-left text-foreground">Perfil</th>
+                <th className="px-6 py-4 text-left text-foreground">Status</th>
+                <th className="px-6 py-4 text-left text-foreground">Ações</th>
               </tr>
             </thead>
             <tbody>
               {filteredUsuarios.map((user) => (
-                <tr key={user.id} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
-                  <td className="px-6 py-4 text-slate-900">#{user.id}</td>
-                  <td className="px-6 py-4 text-slate-900">{user.nome}</td>
-                  <td className="px-6 py-4 text-slate-600">{user.email}</td>
+                <tr key={user.id} className="border-b border-slate-100 hover:bg-accent transition-colors">
+                  <td className="px-6 py-4 text-muted-foreground">#{user.id}</td>
+                  <td className="px-6 py-4 text-muted-foreground">{user.nome}</td>
+                  <td className="px-6 py-4 text-muted-foreground">{user.email}</td>
                   <td className="px-6 py-4">
                     <span className={`px-3 py-1 rounded-lg ${getPerfilColor(user.perfil)}`}>
                       {user.perfil}
@@ -134,48 +134,48 @@ export default function GestaoUsuarios() {
       {/* Modal */}
       {showModal && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-2xl p-8 max-w-lg w-full">
+          <div className="bg-card rounded-2xl p-8 max-w-lg w-full">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
                 <Shield className="w-6 h-6 text-blue-600" />
               </div>
               <div>
-                <h2 className="text-slate-900">Registrar Novo Usuário</h2>
-                <p className="text-slate-600">Preencha as informações abaixo</p>
+                <h2 className="text-foreground">Registrar Novo Usuário</h2>
+                <p className="text-muted-foreground">Preencha as informações abaixo</p>
               </div>
             </div>
 
             <form className="space-y-4">
               <div>
-                <label className="block text-slate-700 mb-2">Nome Completo</label>
+                <label className="block text-foreground">Nome Completo</label>
                 <input
                   type="text"
                   placeholder="Nome do usuário"
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+                  className="w-full px-4 py-3 bg-background border border-sidebar-border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-muted-foreground"
                 />
               </div>
 
               <div>
-                <label className="block text-slate-700 mb-2">Email</label>
+                <label className="block text-foreground mb-2">Email</label>
                 <input
                   type="email"
                   placeholder="email@exemplo.com"
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+                  className="w-full px-4 py-3 bg-background border border-sidebar-border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-muted-foreground"
                 />
               </div>
 
               <div>
-                <label className="block text-slate-700 mb-2">Senha</label>
+                <label className="block text-foreground mb-2">Senha</label>
                 <input
                   type="password"
                   placeholder="••••••••"
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+                  className="w-full px-4 py-3 bg-background border border-sidebar-border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-muted-foreground"
                 />
               </div>
 
               <div>
-                <label className="block text-slate-700 mb-2">Perfil</label>
-                <select className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-black">
+                <label className="block text-foreground mb-2">Perfil</label>
+                <select className="w-full px-4 py-3 bg-background border border-sidebar-border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-muted-foreground">
                   <option>Administrador</option>
                   <option>Profissional</option>
                   <option>Paciente</option>
@@ -183,8 +183,8 @@ export default function GestaoUsuarios() {
               </div>
 
               <div>
-                <label className="block text-slate-700 mb-2">Nível de Permissão</label>
-                <select className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-black">
+                <label className="block text-foreground mb-2">Nível de Permissão</label>
+                <select className="w-full px-4 py-3 bg-background border border-sidebar-border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-muted-foreground">
                   <option>Acesso Total</option>
                   <option>Acesso Limitado</option>
                   <option>Somente Leitura</option>

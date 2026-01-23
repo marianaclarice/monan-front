@@ -115,7 +115,7 @@ export default function Layout({
   return (
     <div className="flex h-screen bg-background">
       {/* Sidebar */}
-      <aside className="w-72 bg-background border-r border-slate-200 flex flex-col">
+      <aside className="w-72 bg-background border-r border-sidebar-border flex flex-col">
         {/* Logo */}
         <div className="p-6 border-b border-slate-200">
           <div className="flex items-center gap-3">
@@ -203,7 +203,7 @@ export default function Layout({
         </nav>
 
         {/* Logout */}
-        <div className="p-4 border-t border-slate-200">
+        <div className="p-4 border-t border-sidebar-border">
           <button
             onClick={handleLogoutClick}
             className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-red-600 hover:bg-red-50 transition-all"
@@ -217,7 +217,7 @@ export default function Layout({
       {/* Main Content */}
       <main className="bg-secondary flex-1 flex flex-col overflow-hidden">
         {/* Header com Breadcrumb */}
-        <header className="bg-background border-b border-slate-200 px-8 py-5">
+        <header className="bg-background border-b border-accent px-8 py-5">
           <div className="flex items-center justify-between">
             <div className=" flex items-center gap-2 text-foreground">
               <span>Início</span>

@@ -44,7 +44,7 @@ export default function Perfil({ currentUser }: PerfilProps) {
       </div>
 
       {/* Card de Perfil */}
-      <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+      <div className="bg-card rounded-2xl border border-sidebar-border overflow-hidden">
         {/* Header do Card */}
         <div className="bg-gradient-to-r from-green-600 to-green-500 p-8 text-white">
           <div className="flex items-center gap-4">
@@ -62,7 +62,7 @@ export default function Perfil({ currentUser }: PerfilProps) {
         {/* Conteúdo */}
         <div className="p-8">
           <div className="flex items-center justify-between mb-6">
-            <h3 className="text-slate-900">Informações Profissionais</h3>
+            <h3 className="text-foreground">Informações Profissionais</h3>
             {!isEditing && (
               <button
                 onClick={() => setIsEditing(true)}
@@ -77,7 +77,7 @@ export default function Perfil({ currentUser }: PerfilProps) {
           <form className="space-y-6">
             {/* Nome Completo */}
             <div>
-              <label className="block text-slate-700 mb-2">
+              <label className="block text-muted-foreground mb-2">
                 <div className="flex items-center gap-2">
                   <User className="w-4 h-4" />
                   Nome Completo
@@ -96,7 +96,7 @@ export default function Perfil({ currentUser }: PerfilProps) {
 
             {/* Email */}
             <div>
-              <label className="block text-slate-700 mb-2">
+              <label className="block text-foreground mb-2">
                 <div className="flex items-center gap-2">
                   <Mail className="w-4 h-4" />
                   Email
@@ -115,7 +115,7 @@ export default function Perfil({ currentUser }: PerfilProps) {
 
             {/* Telefone */}
             <div>
-              <label className="block text-slate-700 mb-2">
+              <label className="block text-foreground mb-2">
                 <div className="flex items-center gap-2">
                   <Phone className="w-4 h-4" />
                   Telefone
@@ -134,7 +134,7 @@ export default function Perfil({ currentUser }: PerfilProps) {
 
             {/* CRM */}
             <div>
-              <label className="block text-slate-700 mb-2">
+              <label className="block text-foreground mb-2">
                 <div className="flex items-center gap-2">
                   <Stethoscope className="w-4 h-4" />
                   CRM
@@ -153,7 +153,7 @@ export default function Perfil({ currentUser }: PerfilProps) {
 
             {/* Especialidade */}
             <div>
-              <label className="block text-slate-700 mb-2">
+              <label className="block text-foreground mb-2">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
                   Especialidade
@@ -206,16 +206,16 @@ export default function Perfil({ currentUser }: PerfilProps) {
 
       {/* Estatísticas */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-white rounded-2xl p-6 border border-slate-200">
-          <p className="text-slate-600 mb-2">Análises Realizadas</p>
-          <p className="text-slate-900 text-2xl font-bold">127</p>
+        <div className="bg-background rounded-2xl p-6 border border-slate-200">
+          <p className="text-muted-foreground mb-2">Análises Realizadas</p>
+          <p className="text-foreground text-2xl font-bold">127</p>
         </div>
-        <div className="bg-white rounded-2xl p-6 border border-slate-200">
-          <p className="text-slate-600 mb-2">Diagnósticos Aprovados</p>
+        <div className="bg-background rounded-2xl p-6 border border-slate-200">
+          <p className="text-muted-foreground mb-2">Diagnósticos Aprovados</p>
           <p className="text-green-600 text-2xl font-bold">112</p>
         </div>
-        <div className="bg-white rounded-2xl p-6 border border-slate-200">
-          <p className="text-slate-600 mb-2">Taxa de Aprovação</p>
+        <div className="bg-background rounded-2xl p-6 border border-slate-200">
+          <p className="text-muted-foreground mb-2">Taxa de Aprovação</p>
           <p className="text-blue-600 text-2xl font-bold">88%</p>
         </div>
       </div>

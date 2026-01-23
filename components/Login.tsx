@@ -117,7 +117,7 @@ export default function Login({ onLogin }: LoginProps) {
             <div className="text-right">
               <a
                 href="#"
-                className="text-blue-600 hover:text-blue-700 transition-colors"
+                className="text-blue-600 hover:text-foreground transition-colors"
               >
                 Esqueci a senha
               </a>
@@ -126,7 +126,7 @@ export default function Login({ onLogin }: LoginProps) {
             {/* Botão Entrar */}
             <button
               type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl transition-all shadow-lg hover:shadow-xl"
+              className="w-full bg-sidebar-primary hover:bg-sidebar-primary text-white py-3 rounded-xl transition-all shadow-lg hover:shadow-xl"
             >
               Entrar
             </button>

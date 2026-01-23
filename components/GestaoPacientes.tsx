@@ -86,7 +86,7 @@ export default function GestaoPacientes() {
       </div>
 
       {/* Search */}
-      <div className="bg-white rounded-2xl p-6 border border-slate-200">
+      <div className="bg-background rounded-2xl p-6 border border-sidebar-border">
         <div className="relative">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
           <input
@@ -94,42 +94,42 @@ export default function GestaoPacientes() {
             placeholder="Buscar por nome, CPF ou data de nascimento..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 text-black"
+            className="w-full pl-11 pr-4 py-3 bg-background border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 text-foreground"
           />
         </div>
       </div>
 
       {/* Lista de Pacientes (Preview) */}
-      <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+      <div className="bg-background rounded-2xl border border-sidebar-border overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full">
-            <thead className="bg-slate-50 border-b border-slate-200">
+            <thead className="bg-background border-b border-slate-200">
               <tr>
-                <th className="px-6 py-4 text-left text-slate-700">Nome</th>
-                <th className="px-6 py-4 text-left text-slate-700">CPF</th>
-                <th className="px-6 py-4 text-left text-slate-700">Data de Nascimento</th>
-                <th className="px-6 py-4 text-left text-slate-700">Status</th>
-                <th className="px-6 py-4 text-left text-slate-700">Ações</th>
+                <th className="px-6 py-4 text-left text-foreground">Nome</th>
+                <th className="px-6 py-4 text-left text-foreground">CPF</th>
+                <th className="px-6 py-4 text-left text-foreground">Data de Nascimento</th>
+                <th className="px-6 py-4 text-left text-foreground">Status</th>
+                <th className="px-6 py-4 text-left text-foreground">Ações</th>
               </tr>
             </thead>
             <tbody>
               {filteredPacientes.map((paciente) => (
-                <tr key={paciente.id} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                <tr key={paciente.id} className="border-b border-slate-100 hover:bg-accent transition-colors">
                   <td className="px-6 py-4">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
                         <UserCircle className="w-5 h-5 text-purple-600" />
                       </div>
                       <div>
-                        <p className="text-slate-900">{paciente.nome}</p>
-                        <p className="text-slate-500 text-sm">{paciente.idade}</p>
+                        <p className="text-muted-foreground">{paciente.nome}</p>
+                        <p className="text-muted-foreground text-sm">{paciente.idade}</p>
                       </div>
                     </div>
                   </td>
-                  <td className="px-6 py-4 text-slate-900">{paciente.cpfPaciente}</td>
-                  <td className="px-6 py-4 text-slate-900">
+                  <td className="px-6 py-4 text-muted-foreground">{paciente.cpfPaciente}</td>
+                  <td className="px-6 py-4 text-muted-foreground">
                     <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4 text-slate-400" />
+                      <Calendar className="w-4 h-4 text-muted-foreground" />
                       {paciente.dataNascimento}
                     </div>
                   </td>
@@ -187,15 +187,15 @@ export default function GestaoPacientes() {
             if (e.target === e.currentTarget) setShowNewModal(false);
           }}
         >
-          <div className="bg-white rounded-2xl p-8 max-w-2xl w-full my-8">
+          <div className="bg-card rounded-2xl p-8 max-w-2xl w-full my-8">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
                   <UserCircle className="w-6 h-6 text-purple-600" />
                 </div>
                 <div>
-                  <h2 className="text-slate-900">Novo Paciente</h2>
-                  <p className="text-slate-600">Cadastre um paciente para avaliação de TEA</p>
+                  <h2 className="text-foreground">Novo Paciente</h2>
+                  <p className="text-muted-foreground">Cadastre um paciente para avaliação de TEA</p>
                 </div>
               </div>
               <button
@@ -213,7 +213,7 @@ export default function GestaoPacientes() {
             }}>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-slate-700 mb-2">Nome do Paciente</label>
+                  <label className="block text-foreground mb-2">Nome do Paciente</label>
                   <input
                     type="text"
                     placeholder="Nome completo da criança"
@@ -222,7 +222,7 @@ export default function GestaoPacientes() {
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-700 mb-2">Nome do Responsável</label>
+                  <label className="block text-foreground mb-2">Nome do Responsável</label>
                   <input
                     type="text"
                     placeholder="Nome do responsável"
@@ -234,7 +234,7 @@ export default function GestaoPacientes() {
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-slate-700 mb-2">CPF do Paciente</label>
+                  <label className="block text-foreground mb-2">CPF do Paciente</label>
                   <input
                     type="text"
                     placeholder="000.000.000-00"
@@ -243,7 +243,7 @@ export default function GestaoPacientes() {
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-700 mb-2">CPF do Responsável</label>
+                  <label className="block text-foreground mb-2">CPF do Responsável</label>
                   <input
                     type="text"
                     placeholder="000.000.000-00"
@@ -255,7 +255,7 @@ export default function GestaoPacientes() {
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-slate-700 mb-2">Data de Nascimento</label>
+                  <label className="block text-foreground mb-2">Data de Nascimento</label>
                   <input
                     type="date"
                     className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 text-black"
@@ -263,7 +263,7 @@ export default function GestaoPacientes() {
                   />
                 </div>
                 <div>
-                  <label className="block text-slate-700 mb-2">Telefone</label>
+                  <label className="block text-foreground mb-2">Telefone</label>
                   <input
                     type="tel"
                     placeholder="(00) 00000-0000"
@@ -274,7 +274,7 @@ export default function GestaoPacientes() {
               </div>
 
               <div>
-                <label className="block text-slate-700 mb-2">Email</label>
+                <label className="block text-foreground mb-2">Email</label>
                 <input
                   type="email"
                   placeholder="email@exemplo.com"
@@ -285,7 +285,7 @@ export default function GestaoPacientes() {
 
               <div className="grid grid-cols-4 gap-4">
                 <div className="col-span-1">
-                  <label className="block text-slate-700 mb-2">CEP</label>
+                  <label className="block text-foreground mb-2">CEP</label>
                   <input
                     type="text"
                     placeholder="00000-000"
@@ -294,7 +294,7 @@ export default function GestaoPacientes() {
                   />
                 </div>
                 <div className="col-span-3">
-                  <label className="block text-slate-700 mb-2">Endereço Completo</label>
+                  <label className="block text-foreground mb-2">Endereço Completo</label>
                   <input
                     type="text"
                     placeholder="Rua, número - Cidade/UF"
@@ -305,7 +305,7 @@ export default function GestaoPacientes() {
               </div>
 
               <div>
-                <label className="block text-slate-700 mb-2">Observações Clínicas</label>
+                <label className="block text-foreground mb-2">Observações Clínicas</label>
                 <textarea
                   rows={3}
                   placeholder="Descreva os sintomas observados, histórico familiar, etc..."

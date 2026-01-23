@@ -128,7 +128,7 @@ export default function Dashboard({ currentUser }: DashboardProps) {
         <p className="text-muted-foreground">
           Bem-vindo ao Sistema MONAN - Suas análises e pacientes
         </p>
-        <p className="text-slate-500 mt-1">
+        <p className="text-muted-foreground mt-1">
           {currentUser?.nome} • {currentUser?.crm || 'Médico'}
         </p>
       </div>
@@ -157,8 +157,8 @@ export default function Dashboard({ currentUser }: DashboardProps) {
               <CheckCircle className="w-5 h-5 text-white" />
             </div>
             <div className="flex-1">
-              <p className="text-foreground">Diagnóstico Aprovado</p>
-              <p className="text-muted-foreground">Paciente: Carlos Oliveira - 10/12/2025</p>
+              <p className="text-black">Diagnóstico Aprovado</p>
+              <p className="text-black">Paciente: Carlos Oliveira - 10/12/2025</p>
             </div>
           </div>
           
@@ -167,8 +167,8 @@ export default function Dashboard({ currentUser }: DashboardProps) {
               <Activity className="w-5 h-5 text-foreground" />
             </div>
             <div className="flex-1">
-              <p className="text-foreground">Análise Pendente</p>
-              <p className="text-muted-foreground">Paciente: Roberto Santos Junior - 09/12/2025</p>
+              <p className="text-black">Análise Pendente</p>
+              <p className="text-black">Paciente: Roberto Santos Junior - 09/12/2025</p>
             </div>
           </div>
           
@@ -177,8 +177,8 @@ export default function Dashboard({ currentUser }: DashboardProps) {
               <CheckCircle className="w-5 h-5 text-white" />
             </div>
             <div className="flex-1">
-              <p className="text-foreground">Diagnóstico Aprovado</p>
-              <p className="text-muted-foreground">Paciente: Ana Paula Costa - 09/12/2025</p>
+              <p className="text-black">Diagnóstico Aprovado</p>
+              <p className="text-black">Paciente: Ana Paula Costa - 09/12/2025</p>
             </div>
           </div>
 
@@ -187,8 +187,8 @@ export default function Dashboard({ currentUser }: DashboardProps) {
               <XCircle className="w-5 h-5 text-white" />
             </div>
             <div className="flex-1">
-              <p className="text-foreground">Análise Negada</p>
-              <p className="text-muted-foreground">Paciente: Ana Paula Costa - 10/12/2025 (Artefatos técnicos)</p>
+              <p className="text-black">Análise Negada</p>
+              <p className="text-black">Paciente: Ana Paula Costa - 10/12/2025 (Artefatos técnicos)</p>
             </div>
           </div>
 
@@ -197,8 +197,8 @@ export default function Dashboard({ currentUser }: DashboardProps) {
               <CheckCircle className="w-5 h-5 text-white" />
             </div>
             <div className="flex-1">
-              <p className="text-foreground">Diagnóstico Aprovado</p>
-              <p className="text-muted-foreground">Paciente: Pedro Henrique Alves - 12/12/2025</p>
+              <p className="text-black">Diagnóstico Aprovado</p>
+              <p className="text-black">Paciente: Pedro Henrique Alves - 12/12/2025</p>
             </div>
           </div>
         </div>

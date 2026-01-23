@@ -42,7 +42,7 @@ export default function GestaoUsuarios() {
         </div>
         <button 
           onClick={() => setShowModal(true)}
-          className="flex items-center gap-2 bg-sidebar-primary text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl"
+          className="flex items-center gap-2 bg-sidebar-primary text-white px-6 py-3 rounded-xl hover:bg-sidebar-primary transition-all shadow-lg hover:shadow-xl"
         >
           <Plus className="w-5 h-5" />
           Registrar Usuário
@@ -201,7 +201,7 @@ export default function GestaoUsuarios() {
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-colors"
+                  className="flex-1 px-6 py-3 bg-sidebar-primary text-white rounded-xl hover:bg-sidebar-primary transition-colors"
                 >
                   Registrar
                 </button>

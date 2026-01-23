@@ -54,20 +54,20 @@ export default function Permissoes() {
     <div className="max-w-7xl mx-auto space-y-6">
       {/* Header */}
       <div>
-        <h1 className="text-foreground mb-2">Permissões e Acessos</h1>
-        <p className="text-muted-foreground">Gerencie os níveis de acesso dos usuários</p>
+        <h1 className="text-slate-900 mb-2">Permissões e Acessos</h1>
+        <p className="text-slate-600">Gerencie os níveis de acesso dos usuários</p>
       </div>
 
       {/* Info Cards - Níveis de Acesso */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-background rounded-2xl p-6 border border-slate-200">
+        <div className="bg-white rounded-2xl p-6 border border-slate-200">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
               <Shield className="w-6 h-6 text-purple-600" />
             </div>
             <div>
-              <h3 className="text-foreground">ADM</h3>
-              <p className="text-muted-foreground">Acesso Total</p>
+              <h3 className="text-slate-900">ADM</h3>
+              <p className="text-slate-600">Acesso Total</p>
             </div>
           </div>
           <ul className="space-y-2 text-slate-700">
@@ -154,7 +154,7 @@ export default function Permissoes() {
                     </div>
                     <div>
                       <h3 className="mb-1">{perm.nome}</h3>
-                      <p className="text-white/80">ID: {perm.usuarioId}</p>
+                      <p className="text-foreground/80">ID: {perm.usuarioId}</p>
                     </div>
                   </div>
                   <div className="text-right">

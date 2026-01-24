@@ -194,7 +194,7 @@ export default function GestaoLaudos({ currentUser }: GestaoLaudosProps) {
                   </div>
                   <div>
                     <h2 className="mb-1">Diagnóstico Assistido por IA #{selectedDiagnostico}</h2>
-                    <p className="text-blue-100">Sistema MONAN - Análise de TEA via ECG</p>
+                    <p className="text-blue-100">Sistema MONAN - Análise de TEA via EEG</p>
                   </div>
                 </div>
                 <button
@@ -258,9 +258,9 @@ export default function GestaoLaudos({ currentUser }: GestaoLaudosProps) {
                     </div>
                   </div>
                   <div className="pt-4 border-t border-blue-200">
-                    <p className="text-slate-700 mb-2"><strong>Características Detectadas no ECG:</strong></p>
+                    <p className="text-slate-700 mb-2"><strong>Características Detectadas no EEG:</strong></p>
                     <ul className="text-slate-600 space-y-2">
-                      <li>• Padrões de variabilidade cardíaca compatíveis com TEA</li>
+                      <li>• Padrões de variabilidade da atividade encefalográfica compatíveis com TEA</li>
                       <li>• Assimetria na modulação autonômica</li>
                       <li>• Correlação de 87% com banco de dados de diagnósticos confirmados</li>
                       <li>• Alterações na banda de baixa frequência (LF) do espectro</li>
@@ -299,7 +299,7 @@ export default function GestaoLaudos({ currentUser }: GestaoLaudosProps) {
                   </div>
                   <p className="text-slate-700 mb-2"><strong>Parecer Médico:</strong></p>
                   <p className="text-slate-600">
-                    Concordo com a análise da IA. Os padrões identificados no ECG, aliados às 
+                    Concordo com a análise da IA. Os padrões identificados no EEG, aliados às 
                     observações clínicas e comportamentais relatadas, são compatíveis com Transtorno 
                     do Espectro Autista (TEA). Recomendo avaliação multidisciplinar complementar e 
                     acompanhamento terapêutico especializado.

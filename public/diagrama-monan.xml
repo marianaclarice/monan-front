@@ -6,7 +6,7 @@
         <mxCell id="1" parent="0"/>
         
         <!-- Sistema Central IA -->
-        <mxCell id="ia-core" value="SISTEMA IA&#xa;Análise ECG para TEA&#xa;Base: 10.245 diagnósticos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;fontStyle=1;strokeWidth=3" vertex="1" parent="1">
+        <mxCell id="ia-core" value="SISTEMA IA&#xa;Análise EEG para TEA&#xa;Base: 10.245 diagnósticos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;fontStyle=1;strokeWidth=3" vertex="1" parent="1">
           <mxGeometry x="800" y="40" width="200" height="80" as="geometry"/>
         </mxCell>
         
@@ -224,7 +224,7 @@
         </mxCell>
         
         <!-- Diagnósticos IA -->
-        <mxCell id="laud-1" value="DIAGNÓSTICOS IA&#xa;Análise ECG para TEA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="laud-1" value="DIAGNÓSTICOS IA&#xa;Análise EEG para TEA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="40" y="620" width="200" height="60" as="geometry"/>
         </mxCell>
         
@@ -283,7 +283,7 @@
         <mxCell id="perm-4" value="Diagrama Relacionamentos&#xa;(Usuario ↔ PermissaoAcesso)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
           <mxGeometry x="350" y="780" width="280" height="50" as="geometry"/>
         </mxCell>
-        <mxCell id="perm-5" value="Estrutura de Classes&#xa;(Usuario, ADM, Medico, Paciente,&#xa;DiagnosticoIA, AnaliseECG)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
+        <mxCell id="perm-5" value="Estrutura de Classes&#xa;(Usuario, ADM, Medico, Paciente,&#xa;DiagnosticoIA, AnaliseEEG)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
           <mxGeometry x="350" y="840" width="280" height="70" as="geometry"/>
         </mxCell>
         <mxCell id="perm-6" value="Regras de Acesso&#xa;ADM: Total&#xa;Médico: Revisar Diagnósticos IA&#xa;Paciente: Ver Próprio Histórico" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450" vertex="1" parent="1">
@@ -357,11 +357,11 @@
           <mxGeometry x="1000" y="620" width="360" height="380" as="geometry"/>
         </mxCell>
         
-        <mxCell id="flow-1" value="1. Upload ECG do Paciente" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" vertex="1" parent="1">
+        <mxCell id="flow-1" value="1. Upload EEG do Paciente" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" vertex="1" parent="1">
           <mxGeometry x="1020" y="660" width="160" height="40" as="geometry"/>
         </mxCell>
         
-        <mxCell id="flow-2" value="2. IA Analisa ECG&#xa;Base: 10.245 diagnósticos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6" vertex="1" parent="1">
+        <mxCell id="flow-2" value="2. IA Analisa EEG&#xa;Base: 10.245 diagnósticos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6" vertex="1" parent="1">
           <mxGeometry x="1200" y="660" width="140" height="50" as="geometry"/>
         </mxCell>
         
@@ -369,7 +369,7 @@
           <mxGeometry x="1020" y="730" width="160" height="50" as="geometry"/>
         </mxCell>
         
-        <mxCell id="flow-4" value="4. Identifica Características&#xa;no ECG" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
+        <mxCell id="flow-4" value="4. Identifica Características&#xa;no EEG" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
           <mxGeometry x="1200" y="730" width="140" height="50" as="geometry"/>
         </mxCell>
         
@@ -377,7 +377,7 @@
           <mxGeometry x="1020" y="800" width="160" height="50" as="geometry"/>
         </mxCell>
         
-        <mxCell id="flow-6" value="6. Médico Analisa:&#xa;• Dados IA&#xa;• ECG Original&#xa;• Histórico Clínico" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left" vertex="1" parent="1">
+        <mxCell id="flow-6" value="6. Médico Analisa:&#xa;• Dados IA&#xa;• EEG Original&#xa;• Histórico Clínico" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left" vertex="1" parent="1">
           <mxGeometry x="1200" y="800" width="140" height="80" as="geometry"/>
         </mxCell>
         
@@ -499,7 +499,7 @@
           <mxGeometry x="1450" y="550" width="280" height="60" as="geometry"/>
         </mxCell>
         
-        <mxCell id="info-2" value="Tecnologia IA:&#xa;• Rede Neural Profunda&#xa;• Base: 10.245 ECGs diagnosticados&#xa;• Acurácia: 87% de correlação&#xa;• Análise de variabilidade cardíaca&#xa;• Detecção de padrões TEA" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="info-2" value="Tecnologia IA:&#xa;• Rede Neural Profunda&#xa;• Base: 10.245 EEGs diagnosticados&#xa;• Acurácia: 87% de correlação&#xa;• Análise de variabilidade encefalográfica&#xa;• Detecção de padrões TEA" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="1450" y="620" width="280" height="100" as="geometry"/>
         </mxCell>
         
@@ -507,7 +507,7 @@
           <mxGeometry x="1450" y="730" width="280" height="80" as="geometry"/>
         </mxCell>
         
-        <mxCell id="info-4" value="Fluxo de Trabalho:&#xa;1. ECG é enviado ao sistema&#xa;2. IA analisa e gera % similaridade&#xa;3. Médico recebe para revisão&#xa;4. Médico aprova ou nega&#xa;5. Sistema gera relatório final" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="info-4" value="Fluxo de Trabalho:&#xa;1. EEG é enviado ao sistema&#xa;2. IA analisa e gera % similaridade&#xa;3. Médico recebe para revisão&#xa;4. Médico aprova ou nega&#xa;5. Sistema gera relatório final" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="1450" y="820" width="280" height="100" as="geometry"/>
         </mxCell>
         
@@ -531,7 +531,7 @@
         <mxCell id="sidebar-4" value="• Gestão de Pacientes (Crianças TEA)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="1450" y="1150" width="280" height="25" as="geometry"/>
         </mxCell>
-        <mxCell id="sidebar-5" value="• Diagnósticos IA (Análise ECG)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="sidebar-5" value="• Diagnósticos IA (Análise EEG)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="1450" y="1180" width="280" height="25" as="geometry"/>
         </mxCell>
         <mxCell id="sidebar-6" value="• Permissões e Acessos" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
